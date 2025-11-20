@@ -1,26 +1,23 @@
 #include <stdio.h> 
 
 int main(){ 
-    int n1, n2; 
-    int *pont1, *pont2; 
+    int a, b, temp;
+    int *pa = &a;
+    int *pb = &b; 
 
-    printf("Digite um número: "); 
-    scanf("%d", n1); 
+    printf("Digite o valor de a: "); 
+    scanf("%d", &a);
 
-    *pont1 = &n1; 
+    printf("Digite o valor de b: ");
+    scanf("%d", &b);
 
-    printf("Digite outro número: "); 
-    scanf("%d", n2);  
+    temp = *pa; 
+    *pa = *pb; 
+    *pb = temp; 
 
-    *pont2 = &n2;
-
-
-
-
-
-
-
-
+    printf("\nDepois da troca:\n"); 
+    printf("a = %d\n", a); 
+    printf("b = %d\n", b);
 
     return 0;
 }
